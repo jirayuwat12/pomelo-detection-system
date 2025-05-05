@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    environment:
+      - TEST_TIME_IMAGES_PATH=/test_time_images/
+      - PROD=1
+      - DEBUG=true
+      - LOG_FILE=/fastapi/app.log
+    ports: 
+     - 8000:8000

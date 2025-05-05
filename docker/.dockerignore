@@ -1,0 +1,5 @@
+data/pomelo-*
+.venv/
+notebooks/
+__pycache__/
+.env.example
