@@ -6,16 +6,21 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "albumentations>=2.0.6",
+    "fastapi>=0.115.12",
     "ipykernel>=6.29.5",
     "opencv-python>=4.11.0.86",
+    "python-multipart>=0.0.20",
     "scikit-learn>=1.6.1",
+    "torch>=2.7.0",
     "tqdm>=4.67.1",
+    "uvicorn>=0.34.2",
 ]
 
 [dependency-groups]
 dev = [
     "black[jupyter]>=25.1.0",
     "isort>=6.0.1",
+    "lightning>=2.5.1.post0",
     "pandas>=2.2.3",
     "roboflow>=1.1.62",
 ]
