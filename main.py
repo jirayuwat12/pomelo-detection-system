@@ -8,6 +8,7 @@ import cv2
 import dotenv
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
+from prometheus_fastapi_instrumentator import Instrumentator
 
 from pomelo_utils.bytes_processing import bytes_to_cv2_image
 
@@ -47,6 +48,8 @@ async def lifespan(app: FastAPI):
 # Initialize FastAPI app
 app = FastAPI(debug=os.getenv("DEBUG", "false").lower() == "true", lifespan=lifespan)
 
+# Instrument the FastAPI app with Prometheus
+Instrumentator().instrument(app).expose(app)
 
 # Define a prediction endpoint
 @app.post("/predict/")
@@ -94,7 +97,6 @@ async def info():
         "created_at": created_at,
         "test_time_images_path": os.environ["TEST_TIME_IMAGES_PATH"],
     }
-
 
 # Run
 if __name__ == "__main__":

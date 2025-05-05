@@ -13,3 +13,5 @@ data/pomelo-*
 
 app.log
 .env
+
+postgres_data/

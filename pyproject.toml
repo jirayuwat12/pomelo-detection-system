@@ -9,6 +9,7 @@ dependencies = [
     "fastapi>=0.115.12",
     "ipykernel>=6.29.5",
     "opencv-python>=4.11.0.86",
+    "prometheus-fastapi-instrumentator>=7.1.0",
     "python-multipart>=0.0.20",
     "scikit-learn>=1.6.1",
     "torch>=2.7.0",
